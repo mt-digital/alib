@@ -6,6 +6,8 @@ use anyhow::anyhow;
 /// Helper to construct a github URL to the repository
 ///
 /// ```
+/// use alib::github::repo_url;
+///
 /// assert_eq!(
 ///     "https://github.com/subtletea-research/ahelper-rstudio.git",
 ///     repo_url("subtletea-research/ahelper-rstudio")
@@ -27,10 +29,8 @@ pub fn clone(repo_slug: &str) -> anyhow::Result<()> {
         "clone",
         &repo_url(repo_slug),
         &_name,
-    ])
-
-    .status()?;
-
+    ]).status()?;
+    
     Ok(())
 }
     

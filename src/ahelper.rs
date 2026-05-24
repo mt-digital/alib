@@ -166,11 +166,11 @@ impl Module {
 /// Get the module name from a github slug
 ///
 /// ```
-/// use crate::ahelper::module_name;
+/// use alib::ahelper::module_name;
 ///
 /// assert_eq!(
 ///     "ahelper-rstudio",
-///     module_name("subtletea-research/ahelper-rstudio")
+///     module_name("subtletea-research/ahelper-rstudio").unwrap()
 /// )
 /// ```
 pub fn module_name(repo_slug: &str) -> Result<String> {
